@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from '../pages/Login';
-import Dashboard from '../pages/Dashboard';
+import AppDashboard from '../pages/AppDashboard';
+
 import Admin from '../pages/Admin';
 import Unauthorized from '../pages/Unauthorized';
 import ProtectedRoute from '../auth/ProtectedRoute';
@@ -16,7 +17,7 @@ const AppRouter = () => (
         path='/dashboard'
         element={
           <ProtectedRoute>
-            <Dashboard />
+            <AppDashboard />
           </ProtectedRoute>
         }
       />
