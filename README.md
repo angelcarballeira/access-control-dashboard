@@ -1,16 +1,67 @@
-# React + Vite
+# 🔐 Access Control Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación frontend desarrollada en **React** que simula un sistema real de
+autenticación, autorización por roles y rutas protegidas.
 
-Currently, two official plugins are available:
+Ideal como proyecto de **portfolio** para mostrar buenas prácticas y arquitectura
+en aplicaciones modernas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ React + Vite
+- 🌐 React Router
+- 🎨 Tailwind CSS
+- 🔐 Context API
+- 💾 LocalStorage
+- 🧪 Fake API (simulación de backend)
+- 🗂️ Git & GitHub
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Funcionalidades
+
+- Login y logout
+- Persistencia de sesión
+- Roles de usuario (`admin` / `user`)
+- Rutas protegidas
+- Acceso restringido por rol
+- Navbar dinámica
+- UX limpia y profesional
+- Arquitectura escalable
+
+---
+
+## 👤 Usuarios de prueba
+
+| Usuario | Password | Rol |
+|------|---------|-----|
+| admin | admin123 | admin |
+| user | user123 | user |
+
+---
+
+## 🧭 Flujo de navegación
+
+- `/` → Home pública
+- `/login` → Login (solo si no estás logueado)
+- `/dashboard` → Vista protegida
+- `/admin` → Solo rol admin
+
+---
+
+## 🛠️ Instalación y uso
+
+```bash
+# Clonar repositorio
+git clone https://github.com/TU_USUARIO/access-control-dashboard.git
+
+# Entrar al proyecto
+cd access-control-dashboard
+
+# Instalar dependencias
+npm install
+
+# Levantar el proyecto
+npm run dev
