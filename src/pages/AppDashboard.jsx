@@ -1,10 +1,11 @@
-import DashboardLayout from '../layouts/DashboardLayout';
+import MainLayout from '../layouts/MainLayout';
+
 import StatCard from '../components/ui/StatCard';
 import Card from '../components/ui/Card';
 
 const Dashboard = () => {
   return (
-    <DashboardLayout>
+    <MainLayout>
       <h1 className='text-2xl font-bold mb-6 text-gray-800'>Dashboard</h1>
 
       {/* Stats */}
@@ -30,7 +31,7 @@ const Dashboard = () => {
           </p>
         </Card>
       </section>
-    </DashboardLayout>
+    </MainLayout>
   );
 };
 
