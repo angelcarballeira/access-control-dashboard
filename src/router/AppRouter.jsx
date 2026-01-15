@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import AppDashboard from '../pages/AppDashboard';
 import Admin from '../pages/Admin';
+import PublicRoute from './PublicRoute';
 
 import ProtectedRoute from '../auth/ProtectedRoute';
 
@@ -12,7 +13,14 @@ const AppRouter = () => {
     <Routes>
       {/* Public */}
       <Route path='/' element={<Home />} />
-      <Route path='/login' element={<Login />} />
+      <Route
+        path='/login'
+        element={
+          <PublicRoute>
+            <Login />
+          </PublicRoute>
+        }
+      />
 
       {/* Protected */}
       <Route
