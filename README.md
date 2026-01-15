@@ -1,3 +1,5 @@
+🔗 **Live demo:** https://TU-PROYECTO.vercel.app
+
 # 🔐 Access Control Dashboard
 
 Aplicación frontend desarrollada en **React** que simula un sistema real de
@@ -35,10 +37,10 @@ en aplicaciones modernas.
 
 ## 👤 Usuarios de prueba
 
-| Usuario | Password | Rol |
-|------|---------|-----|
-| admin | admin123 | admin |
-| user | user123 | user |
+| Usuario | Password | Rol   |
+| ------- | -------- | ----- |
+| admin   | admin123 | admin |
+| user    | user123  | user  |
 
 ---
 
@@ -65,3 +67,4 @@ npm install
 
 # Levantar el proyecto
 npm run dev
+```
