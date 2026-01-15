@@ -8,7 +8,7 @@ export const loginRequest = (username, password) => {
       );
 
       if (!user) {
-        reject('Invalid credentials');
+        return reject('Invalid credentials');
       }
 
       const { password: _, ...safeUser } = user;

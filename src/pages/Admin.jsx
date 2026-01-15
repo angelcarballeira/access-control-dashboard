@@ -1,17 +1,44 @@
-import DashboardLayout from '../layouts/DashboardLayout';
-import Card from '../components/ui/Card';
+import { useEffect, useState } from 'react';
+import { getUsers } from '../api/usersApi';
 
 const Admin = () => {
-  return (
-    <DashboardLayout>
-      <h1 className='text-2xl font-bold mb-6 text-red-600'>Admin Panel</h1>
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-      <Card>
-        <p className='text-sm text-gray-600'>
-          Gestión de usuarios (próximamente).
-        </p>
-      </Card>
-    </DashboardLayout>
+  useEffect(() => {
+    getUsers().then((data) => {
+      setUsers(data);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return <p>Cargando usuarios...</p>;
+  }
+
+  return (
+    <div>
+      <h1 className='text-xl font-semibold mb-4'>Admin panel</h1>
+
+      <table className='w-full bg-white rounded shadow'>
+        <thead className='bg-gray-100'>
+          <tr>
+            <th className='p-2 text-left'>ID</th>
+            <th className='p-2 text-left'>Usuario</th>
+            <th className='p-2 text-left'>Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((u) => (
+            <tr key={u.id} className='border-t'>
+              <td className='p-2'>{u.id}</td>
+              <td className='p-2'>{u.username}</td>
+              <td className='p-2'>{u.role}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
