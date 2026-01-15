@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className='bg-gray-800 text-white px-6 py-3 flex justify-between items-center'>
       <div className='space-x-4'>
         <Link to='/dashboard' className='hover:underline'>
-          Dashboard
+          Inicio
         </Link>
 
         {user.role === 'admin' && (
