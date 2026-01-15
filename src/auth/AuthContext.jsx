@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
+import { loginRequest } from '../api/authApi';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -13,10 +14,9 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const login = (username, role) => {
-    const userData = { username, role };
-    setUser(userData);
-    localStorage.setItem('user', JSON.stringify(userData));
+  const login = async (username, password) => {
+    const user = await loginRequest(username, password);
+    setUser(user);
   };
 
   const logout = () => {
