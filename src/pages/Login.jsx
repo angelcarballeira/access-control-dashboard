@@ -6,7 +6,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = (role) => {
-    login('angel', role);
+    login('usuario', role);
     navigate('/dashboard');
   };
 
